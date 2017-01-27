@@ -39,3 +39,11 @@ class RemoteConfigManager: NSObject{
 ```
 RemoteConfigManager.remoteConfigValues["loginButton"]=remote["loginButton"]
 ```
+then
+```
+let remoteConfigDefaults:[String:NSObject]=[
+  "loginButton":"login" as NSObject,
+  "PhotoButtonUpdate":"update" as NSObject
+]
+FIRRemoteConfig.remoteConfig().setDefaults(remoteConfigDefaults);
+```
